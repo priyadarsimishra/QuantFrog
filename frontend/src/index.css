@@ -95,3 +95,35 @@ body {
   border-radius: 50%;
   border-color: #C2F23B;
 }
+
+.eps{
+  display: flex;
+  border-radius: 8px;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  background-color: #1E1E20;
+}
+
+.q1q2, .q3q4 {
+  flex-flow: column wrap;
+}
+
+.q1, .q2, .q3, .q4 {
+  display: flex;
+  margin: 1rem;
+  width: 600px;
+  height: 100px;
+  background-color: #161616;
+  border-radius: 8px;
+  border-width: 2px;
+  border-color: #222223;
+}
+
+.divider {
+  height: 98px;
+  width: 1.5px;
+  background-color: #222223;
+}

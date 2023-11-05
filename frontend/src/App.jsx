@@ -5,8 +5,8 @@ import Stock from "./Components/Stock";
 const App = () => {
     return (
         <div>
-            <Home />
-            {/* <Stock /> */}
+            {/* <Home /> */}
+            <Stock />
         </div>
     )
 }
