@@ -1,6 +1,4 @@
-TSLA,Tesla
 NVDA,NVIDIA
-AAPL,Apple
 MSFT,Microsoft
 AMZN,Amazon
 META,Meta Platforms
@@ -27,3 +25,5 @@ CVS,CVS
 COP,ConocoPhilips
 TM,Toyota Motors
 LMT,Lockheed Martin Corp
+AAPL,Apple
+TSLA,Tesla

@@ -4,8 +4,9 @@ import React, { useEffect, useRef } from 'react';
 
 let tvScriptLoadingPromise;
 
-export default function TradingViewWidget() {
+const TradingViewWidget = ({ ticker }) => {
   const onLoadScriptRef = useRef();
+  console.log("t: "+ticker);
 
   useEffect(
     () => {
@@ -16,6 +17,7 @@ export default function TradingViewWidget() {
           const script = document.createElement('script');
           script.id = 'tradingview-widget-loading-script';
           script.src = 'https://s3.tradingview.com/tv.js';
+          script.headers = "Access-Control-Allow-Origin";
           script.type = 'text/javascript';
           script.onload = resolve;
 
@@ -31,7 +33,7 @@ export default function TradingViewWidget() {
         if (document.getElementById('tradingview_a8c26') && 'TradingView' in window) {
           new window.TradingView.widget({
             autosize: true,
-            symbol: "AMZN",
+            symbol: ticker,
             interval: "D",
             timezone: "Etc/UTC",
             theme: "dark",
@@ -54,3 +56,5 @@ export default function TradingViewWidget() {
     </div>
   );
 }
+
+export default TradingViewWidget;
