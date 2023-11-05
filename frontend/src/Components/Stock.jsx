@@ -4,8 +4,11 @@ import TVtape from "./TradingViewWidget";
 import { TickerTape } from "react-ts-tradingview-widgets";
 import { TechnicalAnalysis } from "react-ts-tradingview-widgets";
 import { Timeline } from "react-ts-tradingview-widgets";
+import { useParams } from 'react-router-dom';
 
 const Stock = () => {
+    let { ticker } = useParams();
+
     return (
         <div>
             <div className="bg-[#1f1f22] py-3.5">
@@ -19,12 +22,12 @@ const Stock = () => {
 
             <div className='fx'>
                 <div className="tvw">
-                    <TVtape/>
+                    <TVtape ticker={ticker}/>
                 </div>
 
                 <div className='tech'>
                     <div className="tvtech">
-                        <TechnicalAnalysis className="gg" colorTheme="dark" width="100%"></TechnicalAnalysis>
+                        <TechnicalAnalysis symbol={ticker} className="gg" colorTheme="dark" width="100%"></TechnicalAnalysis>
                     </div>
                 </div>
             </div>
