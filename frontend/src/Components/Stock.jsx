@@ -83,7 +83,7 @@ const Stock = () => {
                             <h1>Estimated EPS: </h1>
                         </div>
                         <h1 className='text-[#b5f2ed] my-7 py-2 mr-3'>value</h1>
-                        <div className='divider'/>
+                        <div className='divider'/> 
 
                         <div className='px-3 py-2 text-black bg-[#C2F23B] h-[40px] my-7 mx-3 rounded-lg font-medium'>
                             <h1>Reported EPS: </h1>
